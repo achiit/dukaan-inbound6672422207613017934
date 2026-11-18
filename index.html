@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ranpise's Dental Clinic | Best Dentist in Kamothe, Navi Mumbai</title>
+<meta name="description" content="Dr. Ranpise's Superspeciality Dental Clinic — Dr. Tushar Ranpise, BDS, MDS (Nair Hosp.), Prosthodontist & Implantologist in Kamothe, Panvel, Navi Mumbai. Dental implants, root canals, crowns & more. Call 98202 79247.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
+<style>
+:root{
+  --blue:#3b82f6; --blue-d:#1d4ed8; --sky:#dbeafe; --pink:#ff6fae; --pink-d:#e0307f; --pink-l:#ffe4f0;
+  --ink:#13214a; --grey:#5b6a8c; --white:#fff;
+  --glass:rgba(255,255,255,.58); --glass-b:rgba(255,255,255,.85);
+  --shadow:0 24px 60px -18px rgba(59,92,214,.32);
+  --grad:linear-gradient(120deg,#3b82f6,#8b8cf6 52%,#ff6fae);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:#f3f8ff;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 460px at 8% 12%,rgba(255,111,174,.20),transparent 70%),radial-gradient(700px 520px at 92% 30%,rgba(59,130,246,.22),transparent 70%),radial-gradient(640px 480px at 40% 100%,rgba(255,150,200,.18),transparent 70%)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,92%);margin:0 auto}
+section{padding:80px 0}
+.kicker{display:inline-block;background:var(--glass);border:1px solid var(--glass-b);color:var(--blue-d);font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:14px;backdrop-filter:blur(10px)}
+.section-title{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:10px}
+.section-sub{color:var(--grey);max-width:640px;margin:0 auto 44px;text-align:center}
+.center{text-align:center}
+.ico{width:1em;height:1em;flex:none}
+.glass{background:var(--glass);border:1px solid var(--glass-b);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.9)}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.7);backdrop-filter:blur(16px) saturate(1.6);border-bottom:1px solid rgba(255,255,255,.9)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+.brand .tooth{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;color:#fff;flex:none;box-shadow:0 8px 20px -6px rgba(255,111,174,.6)}
+.brand small{display:block;font-weight:500;color:var(--grey);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:28px;list-style:none;font-weight:500;font-size:.93rem}
+.nav-links a{color:#334155;transition:color .3s}
+.nav-links a:hover{color:var(--pink-d)}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:999px;font-weight:600;font-size:.9rem;transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .3s;cursor:pointer;border:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-teal{background:var(--grad);color:#fff;box-shadow:0 16px 34px -12px rgba(139,92,246,.55)}
+.btn-teal:hover{box-shadow:0 20px 42px -10px rgba(255,111,174,.6)}
+.btn-green{background:#25d366;color:#fff;box-shadow:0 12px 30px -8px rgba(37,211,102,.5)}
+.btn-green:hover{background:#1ebe5b}
+.btn-outline{border:2px solid var(--blue);color:var(--blue-d);background:rgba(255,255,255,.7)}
+.btn-outline:hover{background:var(--blue);color:#fff}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+/* Hero */
+.hero{position:relative;min-height:calc(100svh - 70px);display:flex;align-items:center;padding:0;overflow:hidden;background:linear-gradient(135deg,#e3efff,#fff 45%,#ffe4f0)}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.glass-motion{position:absolute;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen}
+/* ✨ Add your glass motion (video / Lottie / canvas) inside .glass-motion above */
+.hero-inner{position:relative;z-index:2;padding:80px 0;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;width:100%}
+.hero-tilt{will-change:transform;transform-origin:50% 50%}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.6rem);margin:14px 0 18px;letter-spacing:-.01em}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.05rem;color:#3b4a73;max-width:540px;margin-bottom:28px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.badge{padding:9px 18px;border-radius:999px;font-size:.83rem;font-weight:500;display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.62);border:1px solid var(--glass-b);backdrop-filter:blur(10px)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-card{border-radius:24px;padding:30px}
+.hero-card .doc-name{font-family:'Poppins';font-weight:700;font-size:1.35rem;color:var(--blue-d)}
+.hero-card .doc-spec{color:var(--grey);font-size:.9rem;margin-bottom:6px}
+.hero-card ul{list-style:none;margin:16px 0 22px;display:grid;gap:10px;font-size:.9rem}
+.hero-card li{display:flex;gap:10px;align-items:flex-start}
+.hero-card li svg{margin-top:4px;color:var(--pink-d)}
+.hero-in{animation:rise 1.1s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* Stats */
+.stats{background:var(--grad);color:#fff;padding:44px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat h3{font-family:'Poppins';font-size:2rem;font-weight:700}
+.stat p{font-size:.85rem;color:#fdf2f8;letter-spacing:.05em;text-transform:uppercase}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-media{position:relative}
+.about-media img{border-radius:24px;box-shadow:var(--shadow);width:100%;object-fit:cover;border:6px solid rgba(255,255,255,.8)}
+.about-media .float-card{position:absolute;bottom:-24px;left:-18px;border-radius:18px;padding:16px 22px;display:flex;gap:12px;align-items:center}
+.float-card .num{font-size:1.5rem;font-weight:700;color:var(--pink-d)}
+.float-card small{color:var(--grey);font-size:.75rem;line-height:1.3;display:block}
+.about-text p{color:var(--grey);margin-bottom:14px}
+.check-list{list-style:none;margin:20px 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check-list li{display:flex;gap:10px;font-size:.92rem;font-weight:500;align-items:center}
+.check-ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--pink-l);color:var(--pink-d);display:grid;place-items:center;font-size:.7rem}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service{border-radius:22px;padding:32px 26px;transition:transform .5s var(--ease),box-shadow .5s var(--ease);position:relative;overflow:hidden}
+.service::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.service::after{content:"";position:absolute;top:-60%;left:-40%;width:50%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);transform:rotate(18deg) translateX(-200%);transition:transform .9s var(--ease)}
+.service:hover{transform:translateY(-8px);box-shadow:0 30px 60px -16px rgba(255,111,174,.4)}
+.service:hover::before{transform:scaleX(1)}
+.service:hover::after{transform:rotate(18deg) translateX(520%)}
+.service .ic{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--sky),var(--pink-l));display:grid;place-items:center;margin-bottom:18px;font-size:1.5rem}
+.service h3{font-size:1.12rem;margin-bottom:8px;font-family:'Poppins';font-weight:600}
+.service p{color:var(--grey);font-size:.88rem}
+
+/* Why */
+.why{background:linear-gradient(135deg,#1e3a8a,#3b4fd8 55%,#c2418a);color:#fff;position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-160px;background:radial-gradient(circle,rgba(255,111,174,.45),transparent 70%)}
+.why .kicker{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative}
+.why-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.why-gallery img{border-radius:18px;width:100%;height:190px;object-fit:cover;border:1px solid rgba(255,255,255,.45);box-shadow:0 14px 30px -10px rgba(0,0,0,.35)}
+.why-gallery img:first-child{grid-column:1/-1;height:230px}
+.why-list{list-style:none;display:grid;gap:18px;margin-top:26px}
+.why-list li{display:flex;gap:14px}
+.why-list .n{width:44px;height:44px;flex:none;border-radius:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);display:grid;place-items:center;font-weight:700;color:#ffd1e6}
+.why-list h4{font-family:'Poppins';font-size:1rem;margin-bottom:3px}
+.why-list p{color:#dbe7ff;font-size:.86rem;font-weight:300}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.g-item{border-radius:18px;overflow:hidden;cursor:pointer;position:relative;border:4px solid rgba(255,255,255,.8);box-shadow:var(--shadow)}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.g-item:hover img{transform:scale(1.08)}
+.g-item::after{content:"⤢";position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(135deg,rgba(59,130,246,.45),rgba(255,111,174,.45));color:#fff;font-size:1.6rem;opacity:0;transition:opacity .4s}
+.g-item:hover::after{opacity:1}
+.g-tall{grid-row:span 2}.g-wide{grid-column:span 2}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:stretch}
+.contact-card{border-radius:24px;padding:38px}
+.c-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid rgba(59,130,246,.12)}
+.c-row:last-of-type{border:none}
+.c-ic{width:48px;height:48px;flex:none;border-radius:14px;background:linear-gradient(135deg,var(--sky),var(--pink-l));display:grid;place-items:center;font-size:1.2rem}
+.c-row h4{font-family:'Poppins';font-size:.95rem;margin-bottom:2px}
+.c-row p{color:var(--grey);font-size:.88rem}
+.c-row a{color:var(--blue-d);font-weight:600}
+.map-card{border-radius:24px;overflow:hidden;min-height:420px;box-shadow:var(--shadow);border:5px solid rgba(255,255,255,.85)}
+.map-card iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+
+/* Footer */
+footer{background:#101b4a;color:#cbd5f5;padding:48px 0 26px;font-size:.88rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
+footer h4{color:#fff;font-family:'Poppins';margin-bottom:14px;font-size:1rem}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a{transition:color .3s}footer a:hover{color:#ff9ac8}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;text-align:center;color:#94a3d0;font-size:.8rem}
+
+/* WhatsApp + lightbox */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:200;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;box-shadow:0 14px 34px -6px rgba(37,211,102,.6);transition:transform .4s var(--ease);animation:waPulse 2.4s infinite}
+.wa-float:hover{transform:scale(1.1)}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wa-tip{position:fixed;right:94px;bottom:36px;z-index:200;background:#fff;padding:8px 16px;border-radius:999px;font-size:.8rem;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,.18);opacity:0;transform:translateX(8px);transition:.3s;pointer-events:none}
+.wa-float:hover + .wa-tip{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(19,33,74,.88);backdrop-filter:blur(8px);display:none;place-items:center;padding:24px}
+.lightbox.open{display:grid;animation:fade .35s}
+@keyframes fade{from{opacity:0}}
+.lightbox img{max-width:94vw;max-height:88vh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.lb-close{position:absolute;top:22px;right:26px;background:rgba(255,255,255,.18);border:none;color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;padding:60px 0}
+  .hero-card{max-width:460px}
+  .about-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:30px}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  section{padding:56px 0}
+  .nav-links{position:fixed;inset:70px 0 auto 0;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);flex-direction:column;padding:22px 6%;gap:16px;transform:translateY(-140%);transition:transform .45s var(--ease);box-shadow:0 24px 40px rgba(0,0,0,.1)}
+  .nav-links.open{transform:none}
+  .hamburger{display:block}
+  .nav-cta .btn-outline{display:none}
+  .nav-cta .btn{padding:9px 16px;font-size:.8rem}
+  .hero p.lead{font-size:.95rem}
+  .services-grid,.check-list{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr;grid-auto-rows:220px}
+  .g-wide{grid-column:auto}.g-tall{grid-row:auto}
+  .about-media .float-card{left:8px;bottom:-16px;padding:12px 16px}
+  .foot-grid{grid-template-columns:1fr}
+  .wa-float{width:56px;height:56px;right:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.5-.6c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.9a11.6 11.6 0 0 0 4.5 4.2c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="ck" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+</svg>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <span class="tooth">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C9 2 8.2 3.5 6.5 3.5 4.2 3.5 2.5 5.6 2.5 8.4c0 2.5 1 4.2 1.7 6.4.6 1.9.8 4.3 1.2 6.5.2 1.1 1.6 1.4 2.2.4.9-1.6 1-4.2 1.7-6 .4-1 1-1.7 2.1-1.7h1.2c1.1 0 1.7.7 2.1 1.7.7 1.8.8 4.4 1.7 6 .6 1 2 .7 2.2-.4.4-2.2.6-4.6 1.2-6.5.7-2.2 1.7-3.9 1.7-6.4 0-2.8-1.7-4.9-4-4.9-1.7 0-2.5-1.5-5.5-1.5z"/></svg>
+      </span>
+      <span>Dr. Ranpise's Dental Clinic<small>Kamothe · Navi Mumbai</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-green" href="https://wa.me/919820279247?text=Hello%20Dr.%20Ranpise%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener"><svg class="ico" style="width:17px;height:17px"><use href="#wa"/></svg>WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+919820279247">☎ 98202 79247</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero: glass shards (WebGL) ===== -->
+<section class="hero" id="home">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="glass-motion" id="glassMotion"><!-- ✨ ADD YOUR GLASS MOTION HERE --></div>
+  <div class="container hero-inner">
+    <div class="hero-tilt hero-in" id="heroTilt">
+      <span class="kicker">Superspeciality Dental Clinic · Kamothe</span>
+      <h1>Your Smile Deserves <span>Specialist Care</span></h1>
+      <p class="lead">Using the latest dental technology, we provide the best dental care — implants, root canals, crowns & smile design by an MDS Prosthodontist & Implantologist (Nair Hospital).</p>
+      <div class="hero-badges">
+        <span class="badge">🦷 BDS, MDS (Nair Hosp.)</span>
+        <span class="badge">🏆 Implantologist & Prosthodontist</span>
+        <span class="badge">🎓 Ex-Asst. Professor, Govt. Dental College</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-green" href="https://wa.me/919820279247?text=Hello%2C%20I%20want%20to%20book%20an%20appointment%20at%20Dr.%20Ranpise%20Dental%20Clinic." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn-teal" href="#services">Explore Treatments</a>
+      </div>
+    </div>
+    <div class="hero-card glass hero-tilt hero-in" id="heroTilt2" style="animation-delay:.15s">
+      <h3 class="doc-name">Dr. Tushar P. Ranpise</h3>
+      <p class="doc-spec">BDS, MDS (Nair Hosp.) · Prosthodontist & Implantologist</p>
+      <ul>
+        <li><svg class="ico" style="width:18px;height:18px"><use href="#ck"/></svg> Ex-Assistant Professor, Govt. Dental College (St. George Hosp.), Mumbai</li>
+        <li><svg class="ico" style="width:18px;height:18px"><use href="#ck"/></svg> Advanced dental implants & full-mouth rehabilitation</li>
+        <li><svg class="ico" style="width:18px;height:18px"><use href="#ck"/></svg> Painless, single-visit root canal specialists</li>
+        <li><svg class="ico" style="width:18px;height:18px"><use href="#ck"/></svg> Sterilized, modern, patient-friendly clinic</li>
+      </ul>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-teal" href="tel:+919820279247" style="flex:1;justify-content:center">☎ Call Now</a>
+        <a class="btn btn-green" href="https://wa.me/919820279247" target="_blank" rel="noopener" style="flex:1;justify-content:center">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat"><h3>15+</h3><p>Years Experience</p></div>
+    <div class="stat"><h3>10,000+</h3><p>Happy Smiles</p></div>
+    <div class="stat"><h3>5,000+</h3><p>Implants Placed</p></div>
+    <div class="stat"><h3>MDS</h3><p>Specialist Care</p></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-media">
+      <img src="assets/clinic-team.png" alt="Dr. Ranpise Dental Clinic team and reception">
+      <div class="float-card glass">
+        <span class="num">★ 4.9</span>
+        <small>Patient-rated care<br>Trusted by families in Kamothe</small>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="kicker">About the Clinic</span>
+      <h2 class="section-title">Specialist-Led Dentistry, Close to Home</h2>
+      <p>Located at Sky Avenue, Sector 34, Kamothe, Dr. Ranpise's Dental Clinic brings superspeciality dental care to Navi Mumbai. Led by <strong>Dr. Tushar P. Ranpise, BDS, MDS (Nair Hospital)</strong> — a Prosthodontist & Implantologist and former Assistant Professor at Government Dental College, Mumbai.</p>
+      <p>From a child's first check-up to full-mouth implant rehabilitation, every treatment plan is designed with precision, honesty, and your long-term health in mind.</p>
+      <ul class="check-list">
+        <li><span class="check-ic">✓</span> Painless single-visit RCT</li>
+        <li><span class="check-ic">✓</span> Dental implants & prosthetics</li>
+        <li><span class="check-ic">✓</span> Digital X-ray & sterilization</li>
+        <li><span class="check-ic">✓</span> Crowns, bridges & dentures</li>
+        <li><span class="check-ic">✓</span> Braces & aligners</li>
+        <li><span class="check-ic">✓</span> Teeth cleaning & whitening</li>
+      </ul>
+      <a class="btn btn-teal" href="#contact">Visit the Clinic</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="center">
+      <span class="kicker">Our Treatments</span>
+      <h2 class="section-title">Complete Dental Care Under One Roof</h2>
+      <p class="section-sub">From routine check-ups to complex full-mouth rehabilitations — every procedure is performed by a superspecialist using modern equipment.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service glass"><div class="ic">🦷</div><h3>Dental Implants</h3><p>Permanent, natural-looking tooth replacement — single implants to full-arch solutions by a certified implantologist.</p></div>
+      <div class="service glass"><div class="ic">🔬</div><h3>Root Canal Treatment</h3><p>Painless, often single-visit RCTs with rotary endodontics to save your natural teeth.</p></div>
+      <div class="service glass"><div class="ic">👑</div><h3>Crowns & Bridges</h3><p>Metal-free ceramic, zirconia and E-max crowns crafted for strength and aesthetics.</p></div>
+      <div class="service glass"><div class="ic">😁</div><h3>Smile Design & Whitening</h3><p>Veneers, composite bonding and professional whitening for a confident, brighter smile.</p></div>
+      <div class="service glass"><div class="ic">🪥</div><h3>Braces & Aligners</h3><p>Orthodontic braces and clear aligners to straighten teeth at every age.</p></div>
+      <div class="service glass"><div class="ic">🧒</div><h3>Kids & Family Dentistry</h3><p>Gentle check-ups, fillings, fluoride and habit-correction care for the whole family.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container why-grid">
+    <div class="why-gallery">
+      <img src="assets/certs-wall.png" alt="Certificates and credentials wall">
+      <img src="assets/implant-xray.png" alt="Dental implant X-ray case">
+      <img src="assets/business-card.png" alt="Clinic business card">
+    </div>
+    <div>
+      <span class="kicker">Why Choose Us</span>
+      <h2 class="section-title" style="color:#fff">Credentials You Can Verify,<br>Results You Can See</h2>
+      <ul class="why-list">
+        <li><span class="n">01</span><div><h4>MDS Specialist, Not General Practice</h4><p>Every implant, crown and denture is planned and executed by a Prosthodontist trained at Nair Hospital.</p></div></li>
+        <li><span class="n">02</span><div><h4>Academic Excellence</h4><p>Former Assistant Professor at Government Dental College (St. George Hospital Campus), Mumbai.</p></div></li>
+        <li><span class="n">03</span><div><h4>Modern, Sterile Equipment</h4><p>Digital radiography, strict sterilization protocols and the latest dental technology.</p></div></li>
+        <li><span class="n">04</span><div><h4>Transparent Pricing</h4><p>Clear estimates before treatment begins. No surprises — just honest dentistry.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="center">
+      <span class="kicker">Clinic Gallery</span>
+      <h2 class="section-title">Step Inside Our Clinic</h2>
+      <p class="section-sub">A modern, clean and welcoming environment designed for stress-free dental visits.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item g-tall" data-cap="Clinic Entrance"><img src="assets/clinic-front.png" alt="Clinic front"></div>
+      <div class="g-item" data-cap="Our Team"><img src="assets/clinic-team.png" alt="Clinic team"></div>
+      <div class="g-item" data-cap="Implant Case"><img src="assets/implant-xray.png" alt="Implant x-ray"></div>
+      <div class="g-item g-wide" data-cap="Credentials Wall"><img src="assets/certs-wall.png" alt="Certificates"></div>
+      <div class="g-item g-wide" data-cap="Certificates"><img src="assets/certs-wall-2.png" alt="Certificate wall 2"></div>
+      <div class="g-item g-wide" data-cap="Clinic Intro"><img src="assets/intro-poster.png" alt="Intro banner"></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="center">
+      <span class="kicker">Book a Visit</span>
+      <h2 class="section-title">We're Right in Your Neighbourhood</h2>
+      <p class="section-sub">Walk in, call, or ping us on WhatsApp — same-day appointments usually available.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card glass">
+        <div class="c-row"><div class="c-ic">📍</div><div><h4>Clinic Address</h4><p>Office No. 16, Sky Avenue Building, Plot No. 7 &amp; 8, Near New Balaji Sweets (Side Lane), Sector 34, Kamothe, Panvel, Navi Mumbai – 410209</p></div></div>
+        <div class="c-row"><div class="c-ic">☎</div><div><h4>Appointment</h4><p><a href="tel:+919820279247">+91 98202 79247</a> · <a href="tel:+919619907307">Emergency: 96199 07307</a></p></div></div>
+        <div class="c-row"><div class="c-ic">💬</div><div><h4>WhatsApp</h4><p><a href="https://wa.me/919820279247" target="_blank" rel="noopener">Chat with us instantly</a> — share your reports &amp; get quick guidance</p></div></div>
+        <div class="c-row"><div class="c-ic">✉</div><div><h4>Email &amp; Web</h4><p><a href="mailto:drtusharranpise@gmail.com">drtusharranpise@gmail.com</a> · <a href="https://www.drtusharranpise.in" target="_blank" rel="noopener">www.drtusharranpise.in</a></p></div></div>
+        <div class="c-row"><div class="c-ic">🕐</div><div><h4>Timings</h4><p>Mon – Sat: 10:00 AM – 9:00 PM · Sun: By appointment</p></div></div>
+        <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+          <a class="btn btn-green" style="flex:1;justify-content:center" href="https://wa.me/919820279247?text=Hello%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-teal" style="flex:1;justify-content:center" href="tel:+919820279247">Call Clinic</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <iframe title="Clinic location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Sky+Avenue,+Sector+34,+Kamothe,+Panvel,+Maharashtra+410209&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>Dr. Ranpise's Dental Clinic</h4>
+        <p style="font-weight:300;max-width:340px">Superspeciality dental care in Kamothe, Navi Mumbai — implants, root canals, crowns and smile design by Dr. Tushar Ranpise, BDS, MDS (Nair Hosp.).</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About the Doctor</a></li>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Book Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://wa.me/919820279247" target="_blank" rel="noopener">WhatsApp: 98202 79247</a></li>
+          <li><a href="https://www.facebook.com/drtusharranpise" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.drtusharranpise.in" target="_blank" rel="noopener">www.drtusharranpise.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Dr. Ranpise's Dental Clinic, Kamothe. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/919820279247?text=Hello%20Dr.%20Ranpise%20Dental%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="ico" style="width:30px;height:30px"><use href="#wa"/></svg></a>
+<span class="wa-tip">Book on WhatsApp 💬</span>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lbClose">✕</button><img id="lbImg" src="" alt=""></div>
+
+<script>
+const ham=document.getElementById('hamburger'),links=document.getElementById('navLinks');
+ham.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg');
+document.querySelectorAll('.g-item').forEach(g=>g.addEventListener('click',()=>{lbImg.src=g.querySelector('img').src;lb.classList.add('open')}));
+document.getElementById('lbClose').addEventListener('click',()=>lb.classList.remove('open'));
+lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open')});
+// smooth scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.service,.about-media,.about-text,.why-list li,.why-gallery,.g-item,.contact-card,.map-card,.section-title,.section-sub,.stat').forEach((el,i)=>{el.classList.add('rv');el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+
+const hero=document.getElementById('home'),cv=document.getElementById('gl');
+const tiltEls=[document.getElementById('heroTilt'),document.getElementById('heroTilt2')];
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){try{init()}catch(e){console.warn('WebGL off',e);cv.remove()}}
+
+function init(){
+const R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:false});
+R.setPixelRatio(Math.min(devicePixelRatio,1.75));
+R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.05;
+const sc=new THREE.Scene();
+const pm=new THREE.PMREMGenerator(R);
+sc.environment=pm.fromScene(new RoomEnvironment(),.04).texture;sc.environmentIntensity=.9;
+
+// soft blue / white / pink backdrop that the glass refracts
+const bc=document.createElement('canvas');bc.width=bc.height=512;
+const g=bc.getContext('2d');
+let gr=g.createLinearGradient(0,0,512,512);gr.addColorStop(0,'#cfe2ff');gr.addColorStop(.5,'#ffffff');gr.addColorStop(1,'#ffd6ea');
+g.fillStyle=gr;g.fillRect(0,0,512,512);
+[[90,90,200,'59,130,246'],[430,150,170,'255,111,174'],[260,430,230,'139,140,246'],[40,420,150,'255,160,205']].forEach(([x,y,r,c])=>{
+  const rg=g.createRadialGradient(x,y,0,x,y,r);rg.addColorStop(0,`rgba(${c},.65)`);rg.addColorStop(1,`rgba(${c},0)`);
+  g.fillStyle=rg;g.fillRect(0,0,512,512)});
+const bt=new THREE.CanvasTexture(bc);bt.colorSpace=THREE.SRGBColorSpace;sc.background=bt;
+
+const cam=new THREE.PerspectiveCamera(30,1,10,6000);
+const root=new THREE.Group();sc.add(root);
+sc.add(new THREE.HemisphereLight(0xffffff,0xffd6ea,.7));
+const key=new THREE.DirectionalLight(0xffffff,1.1);key.position.set(-300,400,500);sc.add(key);
+const lb_=new THREE.PointLight(0x4f8cff,1.6,0,0),lp_=new THREE.PointLight(0xff6fae,1.6,0,0);
+lb_.position.z=lp_.position.z=260;sc.add(lb_,lp_);
+const glow=new THREE.PointLight(0xff9ad0,9e4,520,2);glow.position.z=150;sc.add(glow);
+
+// five cells (panel-normalised, y down)
+const N={tAB:[.22,0],tBC:[.515,0],tCE:[.84,0],bAD:[.34,1],bDE:[.865,1],J0:[.385,.72],J1:[.48,.62],J2:[.716,.49],TL:[0,0],TR:[1,0],BL:[0,1],BR:[1,1]};
+const CELLS=[['TL','tAB','J0','bAD','BL'],['tAB','tBC','J1','J0'],['tBC','tCE','J2','J1'],['J0','J1','J2','bDE','bAD'],['tCE','TR','BR','bDE','J2']];
+const TINT=[0xe6f0ff,0xffe3f0,0xd3e5ff,0xffd2e6,0xdcecff],ROUGH=[.34,.12,.14,.12,.16];
+const keys=Object.keys(N),ph={};keys.forEach((k,i)=>ph[k]=[i*1.7,i*2.3,10+(i*3.7)%10]);
+const isJ=k=>k[0]==='J';
+
+const pieces=CELLS.map((c,i)=>{
+  const mat=new THREE.MeshPhysicalMaterial({color:TINT[i],roughness:ROUGH[i],metalness:0,transmission:.93,thickness:34,ior:1.45,
+    clearcoat:1,clearcoatRoughness:.08,iridescence:.85,iridescenceIOR:1.3,iridescenceThicknessRange:[200,600],
+    attenuationColor:new THREE.Color(i%2?0xffc4de:0xbcd8ff),attenuationDistance:260,envMapIntensity:1.3,specularIntensity:1});
+  const m=new THREE.Mesh(new THREE.BufferGeometry(),mat);root.add(m);
+  return {m,c,z:0,vz:0,rx:0,vrx:0,ry:0,vry:0,hov:0,born:-i*.09,cx:0,cy:0};
+});
+
+let W=1,H=1,S=1,portrait=false;
+function size(){
+  W=hero.clientWidth;H=hero.clientHeight;S=Math.max(.5,Math.min(W,1200)/1500);portrait=H>W;
+  R.setSize(W,H,false);cam.aspect=W/H;cam.position.z=(H/2)/Math.tan(THREE.MathUtils.degToRad(15));cam.far=cam.position.z*4;cam.updateProjectionMatrix();
+}
+new ResizeObserver(size).observe(hero);size();
+
+const ptr={x:0,y:0,sx:0,sy:0,on:0,tOn:0,nx:.5,ny:.5};
+addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();
+  ptr.x=e.clientX-r.left;ptr.y=e.clientY-r.top;
+  ptr.tOn=(ptr.x>=0&&ptr.y>=0&&ptr.x<=r.width&&ptr.y<=r.height)?1:0;});
+document.addEventListener('pointerleave',()=>ptr.tOn=0);
+
+function rounded(pts,r){
+  const s=new THREE.Shape(),n=pts.length;
+  for(let i=0;i<n;i++){
+    const p=pts[i],a=pts[(i+n-1)%n],b=pts[(i+1)%n];
+    const la=Math.hypot(a[0]-p[0],a[1]-p[1]),lb=Math.hypot(b[0]-p[0],b[1]-p[1]);
+    const ta=Math.min(r/la,.45),tb=Math.min(r/lb,.45);
+    const A=[p[0]+(a[0]-p[0])*ta,p[1]+(a[1]-p[1])*ta],B=[p[0]+(b[0]-p[0])*tb,p[1]+(b[1]-p[1])*tb];
+    i?s.lineTo(A[0],A[1]):s.moveTo(A[0],A[1]);s.quadraticCurveTo(p[0],p[1],B[0],B[1]);
+  }
+  return s;
+}
+function build(t){
+  const mx=Math.max(14,W*.04),my=Math.max(14,H*.06),pw=W-mx*2,ph_=H-my*2,gap=7*S+3;
+  const P={};
+  keys.forEach(k=>{
+    let [x,y]=N[k];const f=ph[k];
+    if(k[0]!=='T'&&k[0]!=='B'||k.length>2){x+=Math.sin(t/f[2]*6.283+f[0])*.03;if(isJ(k))y+=Math.sin(t/(f[2]*.8)*6.283+f[1])*.05;}
+    if(k==='tAB'||k==='tBC'||k==='tCE'||k==='bAD'||k==='bDE'){/* edge points drift in x only */}
+    if(ptr.on>.01){const dx=x-ptr.nx,dy=y-ptr.ny,d=Math.hypot(dx*(pw/ph_),dy);
+      if(d<.6&&d>.001){const push=(1-d/.6)*.05*ptr.on;if(!(y===0||y===1))y+=dy/d*push;if(!(x===0||x===1))x+=dx/d*push*(ph_/pw);}}
+    if(portrait)[x,y]=[y,x];
+    P[k]=[mx+x*pw,my+y*ph_];
+  });
+  pieces.forEach(p=>{
+    let pts=p.c.map(k=>P[k]);
+    const cx=pts.reduce((a,q)=>a+q[0],0)/pts.length,cy=pts.reduce((a,q)=>a+q[1],0)/pts.length;
+    pts=pts.map(q=>{const dx=cx-q[0],dy=cy-q[1],d=Math.hypot(dx,dy)||1;return[q[0]-cx+dx/d*gap*1.6,-(q[1]-cy+dy/d*gap*1.6)]});
+    const sh=rounded(pts,20*S),b=2.6*S;
+    const geo=new THREE.ExtrudeGeometry(sh,{depth:13*S,bevelEnabled:true,bevelThickness:b,bevelSize:b,bevelSegments:3,curveSegments:5});
+    p.m.geometry.dispose();p.m.geometry=geo;
+    p.cx=cx-W/2;p.cy=H/2-cy;
+  });
+}
+
+const ray=new THREE.Raycaster(),v2=new THREE.Vector2();
+let tx=0,ty=0,gx=0,gy=0,last=performance.now(),acc=1,vis=true,t0=last,hover=-1;
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(hero);
+const ez=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+
+function frame(now){
+  requestAnimationFrame(frame);
+  if(!vis)return;
+  const dt=Math.min(.05,(now-last)/1000);last=now;const t=(now-t0)/1000;
+  ptr.on+=(ptr.tOn-ptr.on)*(1-Math.exp(-dt/.25));
+  ptr.sx+=(ptr.x-ptr.sx)*(1-Math.exp(-dt/.08));ptr.sy+=(ptr.y-ptr.sy)*(1-Math.exp(-dt/.08));
+  ptr.nx=Math.min(1,Math.max(0,(ptr.sx-Math.max(14,W*.04))/(W-Math.max(14,W*.04)*2)));
+  ptr.ny=Math.min(1,Math.max(0,(ptr.sy-Math.max(14,H*.06))/(H-Math.max(14,H*.06)*2)));
+  if(portrait){const q=ptr.nx;ptr.nx=ptr.ny;ptr.ny=q}
+  acc+=dt;if(acc>1/45){acc=0;build(t)}
+
+  // global tilt toward cursor
+  const nx=ptr.on?(ptr.x/W-.5)*2:0,ny=ptr.on?(ptr.y/H-.5)*2:0,k=1-Math.exp(-dt/.3);
+  tx+=(nx-tx)*k;ty+=(ny-ty)*k;
+  const ry=tx*.1-.012,rx=-ty*.075+.01;
+  root.rotation.set(rx,ry,0);
+  tiltEls.forEach(el=>el.style.transform=`perspective(1600px) rotateX(${(rx*57.3).toFixed(3)}deg) rotateY(${(ry*57.3).toFixed(3)}deg)`);
+
+  // hover pick
+  v2.set((ptr.x/W)*2-1,-(ptr.y/H)*2+1);ray.setFromCamera(v2,cam);
+  const hit=ptr.on>.5?ray.intersectObjects(pieces.map(p=>p.m),false)[0]:null;
+  hover=hit?pieces.findIndex(p=>p.m===hit.object):-1;
+
+  pieces.forEach((p,i)=>{
+    const on=i===hover;
+    const dx=on?Math.max(-1,Math.min(1,(ptr.x-W/2-p.cx)/(Math.max(W,H)*.2))):0,dy=on?Math.max(-1,Math.min(1,(H/2-ptr.y-p.cy)/(Math.max(W,H)*.2))):0;
+    const tz=on?42*S:0,trx=-dy*.22,try_=dx*.22;
+    const sp=(x,v,tg)=>{v+=((tg-x)*170-v*19)*dt;return[x+v*dt,v]};
+    [p.z,p.vz]=sp(p.z,p.vz,tz);[p.rx,p.vrx]=sp(p.rx,p.vrx,trx);[p.ry,p.vry]=sp(p.ry,p.vry,try_);
+    p.hov+=((on?1:0)-p.hov)*(1-Math.exp(-dt/.18));
+    const e=Math.min(1,Math.max(0,(t+p.born)/1.1)),en=e>=1?1:ez(e);
+    p.m.position.set(p.cx,p.cy,p.z+(1-en)*-420);
+    p.m.rotation.set(p.rx+(1-en)*.9,p.ry+(1-en)*-.7,(1-en)*.25);
+    const mt=p.m.material;mt.iridescence=.85+.15*p.hov;mt.envMapIntensity=1.3+.7*p.hov;
+  });
+  lb_.position.set(Math.cos(t*.35)*W*.35,Math.sin(t*.27)*H*.3,260);
+  lp_.position.set(Math.cos(t*.3+3)*W*.35,Math.sin(t*.4+1)*H*.3,260);
+  glow.position.set(ptr.sx-W/2,H/2-ptr.sy,150);glow.intensity=9e4*ptr.on;
+  R.render(sc,cam);
+}
+requestAnimationFrame(frame);
+}
+</script>
+</body>
+</html>
